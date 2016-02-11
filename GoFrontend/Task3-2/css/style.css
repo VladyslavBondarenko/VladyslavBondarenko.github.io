@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #282828;
+    margin-top: -50px;
+}
+main {
+    background: url(../img/Background.jpg) no-repeat;
+    width: 820px;
+    padding: 60px 75px;
+    position: relative;
+    height: 760;
+    margin: auto;
+    color: white;
+}
+
+.logo {
+    position: relative;
+    float: left;
+    padding: 110px 0px 15px;
+    width: 270px;
+    text-align: center;
+}
+.logoname {
+    position: absolute;
+    top: 75px;
+    left: 0px;
+}
+.palm {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.contact {
+    float: right;
+    font-size: 9px;
+    padding-top: 90px;
+    padding-right: 20px;
+}
+.contact:first-line {
+    font-size: 11px;
+    line-height: 2em;
+}
+
+.gallery { 
+    clear: both;
+}
+.gallery td {
+    display: block;
+    width: 260px;
+    padding: 180px 15px 50px 15px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.gallery td:last-child {
+    padding-right: 0px;
+}
+.gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gallery span {
+    display: block;
+    width: 270px;
+    height: 185px;
+    position: absolute;
+    top: -5;
+    left: -5;
+    background-image: url(../img/ramka.png);
+}
+.copyright {
+    position:absolute;
+    bottom: 30px;
+    width: 820px;
+    font-size: 11px;
+    text-align: center;
+}
