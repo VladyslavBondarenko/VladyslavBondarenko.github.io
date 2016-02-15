@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: grey;
+}
+.yellow {
+    background: yellow;
+}
+.red {
+    background: red;
+}
+.black {
+    background: black;
+}
+.blue {
+    background: blue;
+}
+.white {
+    background: white;
+}
+table {
+    border: 11px solid grey;
+    border-collapse: collapse;
+}
+td,
+tr {
+    border: 10px solid black;
+    height: 50px;
+    width: 50px;
+}
