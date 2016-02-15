@@ -168,6 +168,7 @@ label {
     width: 150px;
     height: 35px;
     line-height: 35px;
+    display: block;
     margin: 20px auto;
     background: linear-gradient(to top, #2e7ac4, #4faddb);
     border-radius: 3px;
