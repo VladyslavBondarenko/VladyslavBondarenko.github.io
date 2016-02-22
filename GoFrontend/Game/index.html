@@ -5,9 +5,9 @@
 	<title>The game</title>
 	<style>
 		h1, h2, h3 { text-align: center; }
-		div { position: absolute; width: 450px; height: 450px; }
+		div { position: absolute; width: 550px; height: 450px; }
 		#rightside { left: 680px; border-left: 2px solid black; }
-		#leftside { left: 230px; }
+		#leftside { left: 110px; }
 		img { position: absolute; }
 	</style>
 	<script>
@@ -29,7 +29,7 @@
 				var image = document.createElement("img");
 				image.src = "G.png";
 				image.style.top = (Math.floor(Math.random()*319))+"px";
-				image.style.left = (Math.floor(Math.random()*351))+"px";
+				image.style.left = (Math.floor(Math.random()*451))+"px";
 				theLeftSide.appendChild(image);
 			}
 
@@ -69,7 +69,7 @@
 </head>
 <body onload="generateG()">
 	<h1>Найди пездюка!</h1>
-	<h2>Выдави глаз лишнему пездюку</h2>
+	<h2>Выдави глаз лишнему пездюку (он скрылся слева)</h2>
 	<div id="leftside"></div>
 	<div id="rightside"></div>
 </body>
