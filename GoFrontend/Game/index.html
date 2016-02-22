@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The game</title>
+	<style>
+		h1, h2, h3 { text-align: center; }
+		div { position: absolute; width: 450px; height: 450px; }
+		#rightside { left: 680px; border-left: 2px solid black; }
+		#leftside { left: 230px; }
+		img { position: absolute; }
+	</style>
+	<script>
+		var numberOfG = 5;
+		var level = 1;
+
+		function generateG() {
+			var theLeftSide = document.getElementById("leftside");
+			var theRightSide = document.getElementById("rightside");
+			var theBody = document.getElementsByTagName("body")[0];
+
+			var text = "Уровень " + level;
+			var textLevel = document.createElement("h3");
+			textLevel.appendChild(document.createTextNode(text));
+			theBody.insertBefore(textLevel, theLeftSide);
+
+			for(var i = 0; i < numberOfG; i++)
+			{
+				var image = document.createElement("img");
+				image.src = "G.png";
+				image.style.top = (Math.floor(Math.random()*319))+"px";
+				image.style.left = (Math.floor(Math.random()*351))+"px";
+				theLeftSide.appendChild(image);
+			}
+
+			leftSideImage = theLeftSide.cloneNode(true);
+			leftSideImage.removeChild(leftSideImage.lastChild);
+			theRightSide.appendChild(leftSideImage);
+
+			function clearscreen() {
+				var node = document.getElementsByTagName("h3")[0];
+				node.parentNode.removeChild(node);
+				while(theLeftSide.firstChild)
+	        	theLeftSide.removeChild(theLeftSide.firstChild);
+	        	while(theRightSide.firstChild)
+	        	theRightSide.removeChild(theRightSide.firstChild);
+	        }
+			
+			theLeftSide.lastChild.onclick = function nextLevel(event){
+        		event.stopPropagation();
+        		numberOfG += 2;
+        		level += 1;
+        		clearscreen();
+        		generateG();
+        	};
+
+        	theBody.onclick = function gameOver() {
+    			alert("Ты либо криворукий, либо слепой!");
+    			alert("Начинай сначала");
+				theBody.onclick = null;
+				theLeftSide.lastChild.onclick = null;
+				clearscreen();
+				numberOfG = 5;
+				level = 1;
+				generateG();
+			}; 
+		}
+	</script>
+</head>
+<body onload="generateG()">
+	<h1>Найди пездюка!</h1>
+	<h2>Выдави глаз лишнему пездюку</h2>
+	<div id="leftside"></div>
+	<div id="rightside"></div>
+</body>
+</html>
