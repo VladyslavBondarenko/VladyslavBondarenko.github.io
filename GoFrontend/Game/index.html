@@ -2,74 +2,177 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >.
 	<title>The game</title>
 	<style>
-		h1, h2, h3 { text-align: center; }
+		h1, h2, h3 { text-align: center;}
+		h2, h3 { margin-top: -5px;}
 		div { position: absolute; width: 550px; height: 450px; }
 		#rightside { left: 680px; border-left: 2px solid black; }
-		#leftside { left: 110px; }
+		#leftside { left: 100px; }
 		img { position: absolute; }
+		img:hover { cursor: help;}
 	</style>
 	<script>
 		var numberOfG = 5;
 		var level = 1;
+		var time = 30;
+		var live_count = 1;		
+		var flag_5 = true;
+		var flag_10 = true;
+		var falg_15 = true;
+		function generateG() 
+		{
+			function add_level() {
+				var text = "Уровень " + level;
+				var textLevel = document.createElement("h3");
+				textLevel.appendChild(document.createTextNode(text));
+				theBody.insertBefore(textLevel, theLeftSide);
+			}
+			function add_live() {
+				var text = "Право на ошибку: " + live_count;
+				var textLevel_live = document.createElement("h3");
+				textLevel_live.appendChild(document.createTextNode(text));
+				theBody.insertBefore(textLevel_live, theLeftSide);
+			}
+			function add_time() {
+				var text_time = "Время " + time;
+				var textLevel_time = document.createElement("h3");
+				textLevel_time.appendChild(document.createTextNode(text_time));
+				theBody.insertBefore(textLevel_time, theLeftSide);	
+			}
 
-		function generateG() {
 			var theLeftSide = document.getElementById("leftside");
 			var theRightSide = document.getElementById("rightside");
 			var theBody = document.getElementsByTagName("body")[0];
 
-			var text = "Уровень " + level;
-			var textLevel = document.createElement("h3");
-			textLevel.appendChild(document.createTextNode(text));
-			theBody.insertBefore(textLevel, theLeftSide);
+			add_level();
+			add_live();
+
+			if (level == 5 && flag_5) {
+				alert("Красавчик, держи другого Гарика");
+				time += 15;
+        		live_count += 1;
+        		flag_5 = false;
+			}
+			else if (level == 10 && flag_10) {
+				alert("Крут, вот еще другой Гарик");
+				time += 15;
+        		live_count += 1;
+        		flag_10 = false;
+			}
+			else if (level == 15 && falg_15) {
+				time += 15;
+        		live_count += 1;
+				alert("Зоркий сокол!");
+				falg_15 = false;
+			}
 
 			for(var i = 0; i < numberOfG; i++)
 			{
 				var image = document.createElement("img");
-				image.src = "G.png";
+				if (level < 5)
+					image.src = "G1.png";
+				else if (level < 10)
+					image.src = "G2.png";
+				else if (level < 15)
+					image.src = "G3.png";
+				else
+					image.src = "G4.png";
 				image.style.top = (Math.floor(Math.random()*319))+"px";
 				image.style.left = (Math.floor(Math.random()*451))+"px";
 				theLeftSide.appendChild(image);
 			}
 
+			time_prev = 0;
+			add_time();
+			
+			t = setInterval(dectime,1000);
+			function dectime()
+			{
+				var node = document.getElementsByTagName("h3")[2];
+				node.parentNode.removeChild(node);
+
+				time -=1 ;
+				time_prev +=1;
+				add_time();
+
+				if (time == 0)
+				{	
+					alert("Время вышло");
+					theBody.onclick = null;
+					theLeftSide.lastChild.onclick = null;
+					clearscreen();
+					numberOfG = 5;
+					level = 1;
+					time = 10;
+					clearInterval(t);
+					generateG();
+				}
+			}
+			t;
+
 			leftSideImage = theLeftSide.cloneNode(true);
+			leftSideImage.style.left = "0px";
 			leftSideImage.removeChild(leftSideImage.lastChild);
 			theRightSide.appendChild(leftSideImage);
 
-			function clearscreen() {
-				var node = document.getElementsByTagName("h3")[0];
-				node.parentNode.removeChild(node);
+			function clearscreen() 
+			{
+				for (var i = 0; i < 3; i++)
+				{
+					var node = document.getElementsByTagName("h3")[0];
+					node.parentNode.removeChild(node);
+				}
+				clearInterval(t);
+
 				while(theLeftSide.firstChild)
 	        	theLeftSide.removeChild(theLeftSide.firstChild);
 	        	while(theRightSide.firstChild)
 	        	theRightSide.removeChild(theRightSide.firstChild);
 	        }
 			
-			theLeftSide.lastChild.onclick = function nextLevel(event){
+			theLeftSide.lastChild.onclick = function nextLevel(event)
+			{
         		event.stopPropagation();
         		numberOfG += 2;
         		level += 1;
+        		if (time_prev < 10)
+	        		time += (10 - time_prev);
+        		time_prev = 0;
         		clearscreen();
         		generateG();
         	};
-
-        	theBody.onclick = function gameOver() {
-    			alert("Ты либо криворукий, либо слепой!");
-    			alert("Начинай сначала");
-				theBody.onclick = null;
-				theLeftSide.lastChild.onclick = null;
-				clearscreen();
-				numberOfG = 5;
-				level = 1;
-				generateG();
-			}; 
+        	theBody.onclick = function gameOver() 
+			{
+				live_count -= 1;
+				if (live_count >= 0)
+				{
+					alert("Окай, у тебя еще есть шанс");
+	        		time_prev = 0;
+	        		clearscreen();
+	        		generateG();
+				}
+				else
+				{
+	    			alert("Ты либо криворукий, либо слепой!");
+					theBody.onclick = null;
+					theLeftSide.lastChild.onclick = null;
+					clearscreen();
+					numberOfG = 5;
+					level = 1;
+					time = 10;
+					live_count = 1;
+					generateG();
+				}
+			}
+        	
 		}
 	</script>
 </head>
 <body onload="generateG()">
-	<h1>Найди пездюка!</h1>
-	<h2>Выдави глаз лишнему пездюку (он скрылся слева)</h2>
+	<h1>Найди лишнего Гарика!</h1>
+	<h2>он скрылся слева</h2>
 	<div id="leftside"></div>
 	<div id="rightside"></div>
 </body>
