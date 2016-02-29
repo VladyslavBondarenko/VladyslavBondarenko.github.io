@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" >.
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title>The game</title>
 	<style>
 		h1, h2, h3 { text-align: center;}
-		h2, h3 { margin-top: -5px;}
+		h2, h3 { margin-top: -15px;}
 		div { position: absolute; width: 550px; height: 450px; }
 		#rightside { left: 680px; border-left: 2px solid black; }
 		#leftside { left: 100px; }
@@ -23,31 +23,23 @@
 		var falg_15 = true;
 		function generateG() 
 		{
-			function add_level() {
-				var text = "Уровень " + level;
+			function add_text()	{
+				var text = "Право на ошибку: " + live_count 
+					+ "		Уровень " + level + "			Время: " + time;
+				var pre = document.createElement("pre");
+				pre.appendChild(document.createTextNode(text));
 				var textLevel = document.createElement("h3");
-				textLevel.appendChild(document.createTextNode(text));
+				textLevel.appendChild(pre);
 				theBody.insertBefore(textLevel, theLeftSide);
 			}
-			function add_live() {
-				var text = "Право на ошибку: " + live_count;
-				var textLevel_live = document.createElement("h3");
-				textLevel_live.appendChild(document.createTextNode(text));
-				theBody.insertBefore(textLevel_live, theLeftSide);
-			}
-			function add_time() {
-				var text_time = "Время " + time;
-				var textLevel_time = document.createElement("h3");
-				textLevel_time.appendChild(document.createTextNode(text_time));
-				theBody.insertBefore(textLevel_time, theLeftSide);	
+			function del_text() {
+				var node = document.getElementsByTagName("h3")[0];
+				node.parentNode.removeChild(node);
 			}
 
 			var theLeftSide = document.getElementById("leftside");
 			var theRightSide = document.getElementById("rightside");
 			var theBody = document.getElementsByTagName("body")[0];
-
-			add_level();
-			add_live();
 
 			if (level == 5 && flag_5) {
 				alert("Красавчик, держи другого Гарика");
@@ -64,10 +56,10 @@
 			else if (level == 15 && falg_15) {
 				time += 15;
         		live_count += 1;
-				alert("Зоркий сокол!");
+				alert("Зоркий сокол! Сейчас будет вообще хардовый случай");
 				falg_15 = false;
 			}
-
+			
 			for(var i = 0; i < numberOfG; i++)
 			{
 				var image = document.createElement("img");
@@ -85,18 +77,15 @@
 			}
 
 			time_prev = 0;
-			add_time();
-			
+			add_text();
+
 			t = setInterval(dectime,1000);
 			function dectime()
 			{
-				var node = document.getElementsByTagName("h3")[2];
-				node.parentNode.removeChild(node);
-
 				time -=1 ;
 				time_prev +=1;
-				add_time();
-
+				del_text();
+				add_text();
 				if (time == 0)
 				{	
 					alert("Время вышло");
@@ -119,11 +108,7 @@
 
 			function clearscreen() 
 			{
-				for (var i = 0; i < 3; i++)
-				{
-					var node = document.getElementsByTagName("h3")[0];
-					node.parentNode.removeChild(node);
-				}
+				del_text();
 				clearInterval(t);
 
 				while(theLeftSide.firstChild)
@@ -149,10 +134,10 @@
 				if (live_count >= 0)
 				{
 					alert("Окай, у тебя еще есть шанс");
-	        		time_prev = 0;
-	        		clearscreen();
-	        		generateG();
+					del_text();
+					add_text();
 				}
+
 				else
 				{
 	    			alert("Ты либо криворукий, либо слепой!");
