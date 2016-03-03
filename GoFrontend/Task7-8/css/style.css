@@ -74,8 +74,8 @@ header {
 }
 .logo_dot {
     position: absolute;
-    top: -10px;
-    left: 11px;
+    bottom: 47px;
+    left: 12px;
 }
 .navigation {
     float: right;
@@ -150,6 +150,9 @@ header {
     margin: 24px auto;
     width: 35px;
     display: none;
+}
+.navigation_link--home:hover {
+    
 }
 
                             /*SLIDER*/
@@ -335,6 +338,9 @@ header {
     color: #edbfff;
 }
 .testimonial_text {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     font-size: 16px;
     font-family: open_sans;
     color: #454545;
@@ -499,6 +505,9 @@ footer {
     color: #454545;
 }
 .footer_article_text {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     overflow: hidden;
     height: 160px;
     font-family: open_sans;
@@ -693,6 +702,9 @@ footer {
     }
 }
 @media (max-width: 768px) {
+    .logo_dot {
+        display: none;
+    }
     .blurbs {
         width: 98%;
         padding: 10px 0 0 2%;
