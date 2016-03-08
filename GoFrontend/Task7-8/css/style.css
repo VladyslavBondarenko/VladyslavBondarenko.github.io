@@ -48,7 +48,7 @@ body {
 
                                 /*HEADER*/
 .head {
-    background: url(../img/bg.jpg) no-repeat center top;
+    background: url(../img/bg.jpg)no-repeat center top;
     height: 845px;
 }
 header {
@@ -67,8 +67,10 @@ header {
 .logo--purple {
     position: relative;
     left: -5px;
+    color: #745083;
     background: linear-gradient(#745083, #322539);
     -webkit-background-clip: text;
+    -moz-
     color: transparent;
     text-shadow: none;
 }
@@ -240,6 +242,7 @@ header {
 .content-purple {
     overflow: hidden;
     height:auto;
+    background: #745083;
     background: linear-gradient(#745083,#322539);
     border-top: 1px solid #33253a;
     border-bottom: 1px solid #1d2f37;
