@@ -1,0 +1,40 @@
+.logo_purple {
+    
+}
+.logos {
+    height: 118px;
+    overflow: hidden;
+}
+.logos_box {
+    float: left;
+}
+.footer-gray {
+    height: 396px;
+}
+.wrapper {
+    text-align: justify;
+}
+.navigation_link:hover,
+.navigation-menu_link:hover,
+.blurbs_more:hover,
+.updates_more:hover {
+    text-decoration: underline;
+}
+.shape-nav_box_shape {
+    background: url(../img/nav-dark.png);
+    float: left;
+}
+.shape-nav_box_shape--mark {
+    display: none;
+}
+.shape-nav_box_shape--white {
+    width: 22px;
+    border: none;
+    background: url(../img/nav-white.png) center no-repeat;
+}
+.shape-nav_box_shape--white--mark--ie {
+    background: url(../img/nav-mark-dark.png) center no-repeat;
+}
+.shape-nav_box_shape--mark--ie {
+    background: url(../img/nav-mark-white.png) center no-repeat;
+}
