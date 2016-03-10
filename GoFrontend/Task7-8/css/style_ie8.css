@@ -21,7 +21,7 @@
     text-decoration: underline;
 }
 .shape-nav_box_shape {
-    background: url(../img/nav-dark.png);
+    background: url(../img/nav-dark.png) no-repeat;
     float: left;
 }
 .shape-nav_box_shape--mark {
