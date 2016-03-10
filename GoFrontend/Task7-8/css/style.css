@@ -591,6 +591,10 @@ body {
     .arrow_right {
         right: -2.5%;
     }
+    .testimonial:after {
+        border: none;
+        box-shadow: none;
+    }
 }
 @media (max-width: 960px) {
     .header .navigation {
