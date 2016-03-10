@@ -11,6 +11,9 @@
 .footer-gray {
     height: 396px;
 }
+body {
+    text-align: center;
+}
 .wrapper {
     text-align: justify;
 }
