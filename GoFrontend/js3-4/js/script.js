@@ -33,9 +33,8 @@ var testGen = {
         var answer = document.createElement('label');
         var check = document.createElement('input');
         check.setAttribute('type','checkbox');
-        answer.innerHTML = textAnswer;
-        answer.setAttribute('for','check');
-        li.appendChild(check);
+        answer.appendChild(check);
+        answer.appendChild(document.createTextNode(textAnswer));
         li.appendChild(answer);
         this.question.appendChild(li);
     },
@@ -49,7 +48,6 @@ var testGen = {
         this.wrapper.appendChild(submit);
     }
 };
-
 
 var body = document.querySelector('body');
 body.style.fontFamily = 'sans-serif';
