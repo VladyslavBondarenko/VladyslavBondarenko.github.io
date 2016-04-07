@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.screen {
+    margin: 50px auto 0;
+    width: 650px;
+    border: 10px solid black;
+    border-radius: 50px;
+    background-color:azure;
+    font-family: sans-serif;
+    font-weight: bolder; 
+    text-align: center;
+}
+.display {
+    font-size: 100px;
+}
+.ms {
+    display: block;
+    text-align: right;
+    font-size: 60px;
+}
+.buttons {
+    width: 650px;
+    margin: 20px auto;
+    text-align: center;
+}
+.button {
+    cursor: pointer;
+    border: 10px solid black;
+    border-radius: 30px;
+    width: 200px;
+    height: 80px;
+    font-size: 40px;
+    background-color:deepskyblue;
+}
+.button:hover {
+    background-color:dodgerblue;
+}
+.button:focus {
+    outline: none;
+}
+.button_start {
+    float: left;
+}
+.button_reset {
+    float: right;
+}
+.button_unactive {
+    cursor: auto;
+    background-color: darkgray;
+}
+.button_unactive:hover {
+    background-color: darkgray;
+}
+.splits {
+    width: 650px;
+    margin: auto;
+    font-size: 40px;
+    font-family: sans-serif;
+}
