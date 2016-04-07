@@ -52,11 +52,12 @@ var testGen = {
 var body = document.querySelector('body');
 body.style.fontFamily = 'sans-serif';
 body.style.lineHeight = '25px';
+var num_question = 3;
+var num_answer = 3;
+
 testGen.createWrapper(body);
 testGen.createHeader('Тест по программированию');
 testGen.createListQuestion();
-var num_question = 3;
-var num_answer = 3;
 for (var i=1; i<num_question+1; i++) {
     testGen.createQuestion('Вопрос №'+i);
     for (var j=1; j<num_answer+1; j++)
