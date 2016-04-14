@@ -2,3 +2,26 @@
     margin: 0;
     padding: 0;
 }
+form {
+    margin: 100px 100px 0;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+label {
+    display: inline-block;
+    width: 70px;
+    margin-left: 10px;
+}
+fieldset div {
+    margin-bottom: 30px;
+}
+.tooltip {
+    display: none;
+    margin-left: 5px;
+    width: 210px;
+    box-shadow: 0 0 3px 1px #555;
+    border-radius: 3px;
+}
+.help {
+    padding: 5px 10px;
+}
