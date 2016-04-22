@@ -3,9 +3,11 @@
     padding: 0;
 }
 
+                        /*CAROUSEL*/
+
 .wrap_jcarousel {
     width: 600px;
-    margin: 10px auto;
+    margin: 70px auto 20px;
     position: relative;
     border: 10px solid rgba(0,0,0,.5);
     border-radius: 10px;
@@ -23,6 +25,7 @@
 }
 .jcarousel li {
     float: left;
+    height: 400px;
 }
 .jcarousel img {
     width: 600px;
@@ -82,4 +85,112 @@
 }
 .jcarousel-pagination a.active{
     opacity: 0.7;
+}
+
+                        /*MENU*/
+
+.topmenu {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	padding-left: 150px;
+	background-color: #F76060;
+	height: 42px;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+.topLi {
+    display: inline;
+    float: left;
+    position: relative;
+    width: 100px;
+}
+.topmenu a {
+	cursor: pointer;
+    display: block;
+    padding: 10px 0 10px 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #A33737;
+}
+.topmenu a:hover {
+	color: #333;
+}
+.topLi>a {
+	border: none;
+}
+.innerUl {
+	position: relative;
+	top: -5px;
+	width: 200px;
+    display: none;
+	background-color: #D64545;
+    list-style: none;
+}
+.innerLi {
+	padding: 0 10px;
+    position: relative;
+    width: 180px;
+}
+.innerLi .innerUl {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+}
+.arrow {
+	font-size: 8px;
+	color: white;
+}
+.arrow--inner {
+	padding-top: 3px;
+	float: right;
+}
+
+                        /*CHECKBOXES*/
+
+.checkboxesJS {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: deepskyblue;
+}
+.checkboxesCSS {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: dodgerblue;
+}
+.checkboxesJS .niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox-sprite.png);
+    overflow: hidden;
+    margin-left: 5px;
+}
+.checkboxesJS .niceChecked {
+    background-position: 0 -17px;
+}
+.checkboxesJS .niceCheck input {
+    margin-left: -100px;
+}
+.checkboxesCSS input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.checkboxesCSS label {
+    cursor: pointer;
+}
+.checkboxesCSS label:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/checkbox-sprite.png);
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+.checkboxesCSS input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
 }
