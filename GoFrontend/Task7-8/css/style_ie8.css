@@ -1,6 +1,3 @@
-.logo_purple {
-    
-}
 .logos {
     height: 118px;
     overflow: hidden;
@@ -40,4 +37,157 @@ body {
 }
 .shape-nav_box_shape--mark--ie {
     background: url(../img/nav-mark-white.png) center no-repeat;
+}
+
+
+body {
+    width: 100%;
+}
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+.arrow_left {
+    left: -3%;
+}
+.arrow_right {
+    right: -2.5%;
+}
+.testimonial:after {
+    border: none;
+    box-shadow: none;
+}
+
+
+
+.header .navigation {
+    margin-top: 20px;
+    float: left;
+    clear: left;
+}
+.header {
+    height: 244px;
+}
+.head {
+    height: 798px;
+}
+.iphone {
+    right: 3.5%;
+    top: -22px;
+}
+.footer_article {
+    width: 29.375%;
+}
+.footer_article1,
+.footer_article2 {
+    display: none;
+}
+.footer_article4,
+.footer_article5 {
+    display: block;
+}
+.footer_article3 {
+    margin-left: 0;
+}
+.footer_designed {
+     clear: both;
+}
+.footer-nav {
+    height: 200px;
+}
+.slider .shape-nav {
+    bottom: -155px;
+}
+.slider_h,
+.slider_h2,
+.slider_text {
+    padding-left: 22px;
+    overflow: hidden;
+    width: 35%;
+}
+.slider_h {
+    font-size: 48px;
+    height: 64px;
+    padding-top: 91px;
+}
+.slider_h2 {
+    height: 32px;
+    font-size: 24px;
+}
+.slider_text {
+    font-size: 16px;
+    height: 93px;
+    overflow: hidden;
+    width: 36%;
+}
+.blurbs_h {
+    font-size: 24px;
+}
+.blurbs_text {
+    height: 135px;
+    overflow: hidden;
+}
+.blurbs_more {
+    margin-top: 0px;
+}
+.blurbs2:before,
+.blurbs3:before {
+background-position: 0 0;
+}  
+.logos_box_1 {
+    margin-left: 2px;
+}
+.logos_box_6 {
+    margin-right: 0;
+}
+.testimonial {
+    width: 34%;
+    padding-top: 18px;
+}
+.testimonial_h {
+    display: block;
+    height: 30px;
+}
+.testimonial_text {
+    padding-top: 16px;
+    height: 130px;
+    overflow: hidden;
+}
+.updates {
+    width: 44%;
+}
+.updates_text {
+    height: 43px;
+    overflow: hidden;
+}
+.updates_more {
+    margin-right: -1.3%;
+}
+.updates_more1 {
+    display: none;
+}
+.updates_more2 {
+    display: inline;
+}
+.footer_article_name {
+    font-size: 24px;
+}
+.footer_article5 {
+    margin-right: 0;
+}
+.navigation--footer {
+    width: 80%;
+}
+.footer_designed {
+    line-height: 42px;
+}
+.navigation_link--footer {
+    font-size: 20px;
+    margin-right: 3.7%;
+}
+.navigation_link--footer--last {
+    margin-right: 0;
+}
+.logos .wrapper {
+    margin-left: 20%;
 }
