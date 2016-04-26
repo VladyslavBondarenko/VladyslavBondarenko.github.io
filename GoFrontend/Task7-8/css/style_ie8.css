@@ -191,3 +191,6 @@ background-position: 0 0;
 .logos .wrapper {
     margin-left: 20%;
 }
+.updates_img_circle {
+    background: url(../img/updates_img_ie8.png);
+}
