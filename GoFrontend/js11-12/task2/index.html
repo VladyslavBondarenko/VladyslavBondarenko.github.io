@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="js/tmpl.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+ 
+  <script type="text/templates" id="result">
+      <div class="main">
+      <div>
+        <h2 class="center"><%= name %></h2>
+        <p class="center"><img src="img/photo.jpg" alt="My photo"></p>
+        <%= profession %>
+      </div>
+      <div>
+        Хочу учить фронтенд, потому что:
+        <ul>
+          <% for (var i = 0; i < reasons.length; i++) { %>
+            <li><%= reasons[i] %></li>
+          <% }; %>
+        </ul>
+      </div>
+      <div>
+        Мой контактный телефон<br>
+        <%= number %><br><br>
+        Мой профиль вконтакте:
+        <span><%= vk %></span> 
+      </div>
+      <p>
+        Мой фидбек:<br>
+        <%= feedback %>
+      </p>
+    </div>
+  </script>
+  
+</body>
+</html>

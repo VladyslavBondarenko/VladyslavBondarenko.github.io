@@ -1,0 +1,18 @@
+body {
+  background-color: #eeeeee;
+}
+.main {
+  width: 425px;
+  margin: 1px auto 30px auto;
+  padding: 20px 60px 40px 60px;
+  background-color: floralwhite;
+  border: 1px solid #d5d5d5;
+  box-shadow: 0 0 5px #d5d5d5;
+}
+.center {
+  text-align: center;
+}
+div {
+  border-bottom: 2px solid #7a7a7a;
+  padding: 20px 10px 10px 10px;
+}
