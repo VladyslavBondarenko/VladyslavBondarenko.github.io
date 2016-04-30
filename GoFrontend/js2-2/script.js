@@ -1,17 +1,19 @@
 var num = 5;
-var arr = [];
+var names = [];
 var flag = false;
 
-for (var i = 0; i < num; i++)
-    arr[i] = prompt('Enter any name: ');
-
+for (var i = 0; i < num; i++) {
+    names[i] = prompt('Enter any name: ');
+}
 var user = prompt('Enter name of user: ');
 
-for (i = 0; i < name.length; i++)
-    if (arr[i] == user)
+for (i = 0; i < names.length; i++) {
+    if (names[i] == user) {
         flag = true;
-
-if (flag)
+    }
+}
+if (flag) {
     alert(user + ', you successfully logged');
-else 
+} else { 
     alert('Error. No matches found');
+}

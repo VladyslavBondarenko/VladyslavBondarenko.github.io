@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.carousel-hider').carousel(3,200);
+  $('.carousel-hider').carousel(1,300);
 });
 
 

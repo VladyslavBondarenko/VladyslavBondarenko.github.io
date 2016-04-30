@@ -12,7 +12,7 @@ $(document).ready(function() {
     vk: 'vk.com/i_moi_adres',
     feedback: 'Если нужно, помогу с матаном'
   };
-  
+
   var content = tmpl(html, Bondarenko);
   $('body').append(content);
   
