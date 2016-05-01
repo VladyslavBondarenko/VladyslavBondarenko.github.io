@@ -1,23 +1,32 @@
-.carousel-hider {
+.carousel {
+  clear: both;
+  overflow: hidden;
+}
+.carousel-hider,
+.carousel--infinity-hider {
   width: 600px;
   overflow: hidden;
   float: left;
 }
-.carousel-list {    
+.carousel-list,
+.carousel--infinity-list {    
   list-style: none;
   width: 10000px;
   padding: 0px;
   position: relative;
 }
-.carousel-element {
+.carousel-element,
+.carousel--infinity-element {
   display: block;
   margin-right: 25px;
   float: left;
 }
-.carousel-element img {
+.carousel-element img,
+.carousel--infinity-element img {
   max-width: 100px;
 }
-.carousel-arrow {
+.carousel-arrow,
+.carousel--infinity-arrow {
     cursor: pointer;
     float: left;
     display: block;
@@ -26,7 +35,8 @@
     padding: 5px;
     margin-top: 50px;
 }
-.carousel-arrow:hover {
+.carousel-arrow:hover,
+.carousel--infinity-arrow:hover {
     background-color: grey;
 }
 .carousel-arrow--disabled {
@@ -36,9 +46,11 @@
 .carousel-arrow--disabled:hover {
     background-color: lightgrey;
 }
-.carousel-arrow-left {
+.carousel-arrow-left,
+.carousel--infinity-arrow-left {
     margin-right: 25px;
 }
-.carousel-arrow-right {
+.carousel-arrow-right,
+.carousel--infinity-arrow-right {
     margin-left: 25px;
 }
