@@ -57,27 +57,7 @@ body {
 .logo {
     float: left;
     padding-top: 61px;
-    position: relative;
-    font-size: 48px;
-    font-family: league_gothic;
-    color: white;
-    text-shadow: 0px 1px 1px black;
-    text-transform: uppercase;
-}
-.logo--purple {
-    position: relative;
-    left: -5px;
-    color: #745083;
-    background: transparent;
-    background: linear-gradient(#745083, #322539);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: none;
-}
-.logo_dot {
-    position: absolute;
-    bottom: 47px;
-    left: 12px;
+	display: block;
 }
 .navigation {
     float: right;
@@ -110,8 +90,9 @@ body {
 }
 .navigation-menu {
     display: none;
+	z-index: 1;
     position: absolute;
-    top: 150px;
+    top: 138px;
     left: 24%;
     right: 24%;
     background: rgba(54,41,62,0.9);
@@ -153,8 +134,10 @@ body {
     width: 35px;
     display: none;
 }
-.navigation_link--home:hover {
-    
+.navigation_link--home:hover
++ .navigation-menu,
+.navigation-menu:hover {
+    display: block;
 }
 
                             /*SLIDER*/
@@ -585,7 +568,7 @@ body {
 }
 @media (max-width: 1600px) {
     .wrapper {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
     }
     .arrow_left {
@@ -733,6 +716,9 @@ body {
     .logo_dot {
         display: none;
     }
+	.navigation_link--home {
+		display: block;
+	}
     .blurbs {
         width: 98%;
         padding: 10px 0 0 2%;
@@ -788,9 +774,6 @@ body {
     }
     .header {
         height: 204px;
-    }
-    .navigation-menu {
-        display: block;
     }
     .arrow {
         top: 105px;
@@ -849,7 +832,6 @@ body {
         margin: 20px auto;
         width: 100px;
     }
-    .navigation-menu,
     .iphone,
     .footer-gray,
     .navigation--footer {
@@ -857,9 +839,6 @@ body {
     }
     .slider {
         background: none;
-    }
-    .navigation_link--home {
-        display: block;
     }
     .slider_h,
     .slider_h2 {
