@@ -191,6 +191,6 @@
     top: 3px;
     margin-left: 10px;
 }
-.checkboxesCSS input[type=checkbox]:checked, label:after {
+.checkboxesCSS input[type=checkbox]:checked + label:after {
     background-position: 0 -17px;
 }
