@@ -1,0 +1,37 @@
+<DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Task13-14</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="js/tmpl.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+
+  <script type="text/templates" id="result">
+    <form class="wrapper">
+      <p class="header"><%= header %></p>
+      <ol class="list">
+        <% for (var i = 0; i < 8; i++) { %>
+        <li><%= data[i].question %>
+          <ul>
+            <% for (var j = 0; j < 4; j++) { %>
+            <li>
+              <label>
+                <input type="checkbox">
+                <%= data[i].answers[j] %>
+              </label>
+            </li>
+            <% }; %>
+          </ul>
+        </li>
+        <% }; %>
+      </ol>
+      <input class="submit" type="submit" value = "Проверить результаты">
+    </form>
+  </script>
+
+</body>
+</html>

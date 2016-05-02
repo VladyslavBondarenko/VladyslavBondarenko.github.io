@@ -4,6 +4,7 @@ $(document).ready(function() {
   
   var Bondarenko = {
     name: 'Владислав Бондаренко',
+    img: 'img/photo.jpg',
     profession: 'Студент КПИ',
     reasons: ['На моей IT-специальности мало IT-предметов',
               'Нужно учиться и найти хорошую работу',
