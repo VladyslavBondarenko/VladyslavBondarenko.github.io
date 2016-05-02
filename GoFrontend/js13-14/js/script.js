@@ -5,6 +5,7 @@ $(document).ready(function() {
   var content = tmpl($('#result').html(), test14);
   $('body').append(content);
   
+  $('.submit').on('click', function)
 });
 
 var test14 = {

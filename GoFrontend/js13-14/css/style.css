@@ -4,14 +4,17 @@ body {
   line-height: 25px;
 }
 .wrapper {
-  width: 600px;
+  width: 1200px;
 }
 .header {
   text-align: center;
   margin: 20px 0;
 }
-.ul {
+ul {
   list-style-type: none;
+}
+.list>li {
+  padding-bottom: 30px;
 }
 .submit {
   margin: 30px 0 0 200px;

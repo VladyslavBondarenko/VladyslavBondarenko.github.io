@@ -194,3 +194,7 @@
 .checkboxesCSS input[type=checkbox]:checked + label:after {
     background-position: 0 -17px;
 }
+
+.selectbox-wrapper {
+	float: right;
+}

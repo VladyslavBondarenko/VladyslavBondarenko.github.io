@@ -63,6 +63,10 @@ $(function() {
          changeCheck(jQuery(this));
     });
 
+//SELECT
+  
+  	$("#default-usage-select").selectbox();
+
 });
 
 function changeCheck(el) {
