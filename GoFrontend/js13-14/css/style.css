@@ -16,8 +16,47 @@ ul {
 .list>li {
   padding-bottom: 30px;
 }
-.submit {
-  margin: 30px 0 0 200px;
+.check {
+  margin: 30px 0 0 300px;
   background-color: lightblue;
   padding: 10px 20px;
+}
+
+.modal_window {
+  display: none;
+  height: 300px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -250px;
+  position: fixed;
+  z-index: 5;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0;
+}
+.modal_text {
+  font-size: 24px;
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
+  display: block;
+}
+.modal_button {
+  position: absolute;
+  margin: 0px 175px;
+  padding: 20px;
+}
+.overlay {
+  display: none;
+  background-color: black;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
 }
