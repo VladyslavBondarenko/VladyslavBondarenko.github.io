@@ -1,0 +1,9 @@
+.search {
+		width: 400px;
+		text-align: center;
+		margin: 100px auto;
+}
+.search_input {
+		width: 300px;
+		margin: 20px;
+}
