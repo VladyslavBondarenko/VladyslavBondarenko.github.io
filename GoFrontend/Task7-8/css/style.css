@@ -60,8 +60,12 @@ body {
 	display: block;
 }
 .navigation {
+		list-style-type: none;
     float: right;
     margin-top: 72px;
+}
+.navigation>li {
+		display: inline-block;
 }
 .navigation_link {
     font-family: league_gothic;
@@ -90,7 +94,7 @@ body {
 }
 .navigation-menu {
     display: none;
-	z-index: 1;
+		z-index: 1;
     position: absolute;
     top: 138px;
     left: 24%;

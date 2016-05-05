@@ -38,6 +38,17 @@ body {
 .shape-nav_box_shape--mark--ie {
     background: url(../img/nav-mark-white.png) center no-repeat;
 }
+.slider {
+	background: none;
+}
+.slider:before {
+	position: absolute;
+	background-color: black;
+	opacity: 0.2;
+	content: "";
+	width: 100%;
+	height: 400px;
+}
 
 
 body {
@@ -191,6 +202,6 @@ background-position: 0 0;
 .logos .wrapper {
     margin-left: 20%;
 }
-.updates_img_circle {
-    background: url(../img/updates_img_ie8.png);
+.updates_text:before {
+    background: url(../img/updates_img.jpg);
 }
