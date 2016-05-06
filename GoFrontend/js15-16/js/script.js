@@ -1,38 +1,25 @@
-function GoogleCallback(jqueryObj, data){
-	console.log('data',data);
-}
-
-$(function(){
+$(function() {
+	'use strict';
+	$('.search form').on('submit', function(event) {
+		$.ajax({
+			url: "https://www.googleapis.com/customsearch/v1?q="+encodeURIComponent(this.elements[0].value)+"&key=AIzaSyDQq5I1_jJG2eKE78NEUM8GCBRwgXRW0F4&cx=000283222127530457480:fcqttmqm5o0&callback=?",
+			dataType: "jsonp",
+			success: 
+				function(data){
+					if (data === null) {
+          	$('.results').html("Ошибка");
+					} else {
+						var template = $('#search-results').html();
+						var html = tmpl(template, data);
+						$('.results').html(html);
+						$('.search').addClass('search--results');
+						$('.search_header').hide();
+						$('.search_input').addClass('search_input--results');
+					}
+				}
+		});
 		
-	$.ajax({
-		url:
-		'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=large&q=test&callback=GoogleCallback&context=?',
-		dataType: 'jsonp',
-		success: function() {
-			console.log('success');
-		},
-		error: function() {
-			console.log('error');
-		}
+		event.preventDefault();
+		
 	});
-	
-
-});   
-
-//function GoogleCallback (func, data) {
-//    window[func](data);
-//}
-//
-//$.getJSON("http://ajax.googleapis.com/ajax/services/search/web?v=1.0?key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&rsz=large&q=PHP&callback=GoogleCallback&context=?",
-//function(data){
-//    var ul = document.createElement("ul");
-//    $.each(data.results, function(i, val){
-//            var li = document.createElement("li");
-//            var inner = '&lt;a href="'+val.url+'" title="'+val.url+'" target="_blank"&gt;'+val.title+"&lt;/a&gt; - "+val.content;                         
-//            ul.appendChild(li);
-//    });
-//    $('body').html(ul);
-//});
-
-
-
+});

@@ -2,20 +2,42 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Search</title>
+  <title>Поиск</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-1.12.3.min.js"></script>
+  <script src="js/tmpl.js"></script>
   <script src="js/script.js"></script>
 </head>
 <body>
+	
+	<script type="text/template" id="search-results">
+		<ul>
+		<% for(var i = 1; i < items.length; i++) { %>
+			<li class="result-item">
+				<div class="text-block">
+					<a href="<%= items[i].link %>" class="link" target="_blank"><%= items[i].title %></a>
+					<div class="url"><%= items[i].displayLink %></div>
+					<div class="brief"><%= items[i].htmlSnippet %></div>
+				</div>
+			</li>
+		<% }; %>
+		</ul>
+	</script>
 
-<!--
 	<div class="search">
-		<h1 class="search_header">Поиск</h1>
-		<input type="text" class="search_input">
-		<button class="search_submit">Поиск в Google</button>
+		<h1 class="search_header">
+			<span class="blue">П</span>
+			<span class="red">о</span>
+			<span class="orange">и</span>
+			<span class="blue">с</span>
+			<span class="green">к</span>
+		</h1>
+		<form>
+			<input type="text" class="search_input">
+			<input type="submit" class="search_submit" value="Поиск в Google">
+		</form>
+		<div class="results"></div>
 	</div>
--->
 
 </body>
 </html>

@@ -1,9 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
 .search {
-		width: 400px;
-		text-align: center;
-		margin: 100px auto;
+	width: 500px;
+	text-align: center;
+	margin: 100px auto 50px;
+	font-size: 13px;
+}
+.search--results {
+	text-align: justify;
+	width: 800px;
+	margin: 0 auto;
+}
+.search_header {
+	font-size: 56px;	
 }
 .search_input {
-		width: 300px;
-		margin: 20px;
+	font-size: 18px;
+	width: 400px;
+	margin: 20px;
+}
+.search_input--results {
+	margin: 50px 30px 30px 0;
+}
+.search_submit {
+	font-size: 14px;
+	padding: 5px;
+}
+
+.blue {
+	color: dodgerblue;
+}
+.red {
+	color: red;
+}
+.orange {
+	color: darkorange;
+}
+.green {
+	color: green;
+}
+
+li {
+	list-style: none;
+}
+.result-item {
+	margin: 20px 0;
+}
+.link {
+	font-size: 18px;
+	text-decoration: none;
+	color: #1a0dab;
+}
+.link:hover {
+	text-decoration: underline;
+}
+.link:visited {
+	color: #609;
+}
+.url {
+	font-size: 14px;
+	color: #006621;
+}
+.brief {
+	line-height: 18px;
 }
