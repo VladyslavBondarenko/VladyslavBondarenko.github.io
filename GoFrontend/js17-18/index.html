@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+    <link href="css/style.scss" rel="stylesheet">
+    <script src="js/dist/script.main.min.js"></script>
+</head>
+<body>
+   
+    <div class="topmenu">
+        <ul class="topUl">
+            <li class="topLi"><a>Nav 1</a></li>
+            <li class="topLi"><a>Nav 2</a></li>
+            <li class="topLi"><a>Nav 3</a>
+                <ul class="innerUl">
+                   <li class="innerLi"><a>Nav 3.1</a></li>
+                   <li class="innerLi"><a>Nav 3.2</a></li>
+                   <li class="innerLi"><a>Nav 3.3</a></li>
+                   <li class="innerLi"><a>Nav 3.4</a>
+                      <ul class="innerUl">
+                         <li class="innerLi"><a>Nav 3.4.1</a></li>
+                         <li class="innerLi"><a>Nav 3.4.2</a>
+                            <ul class="innerUl">
+                               <li class="innerLi"><a>Nav 3.4.2.1</a></li>
+                               <li class="innerLi"><a>Nav 3.4.2.2</a></li>
+                               <li class="innerLi"><a>Nav 3.4.2.3</a></li>
+                               <li class="innerLi"><a>Nav 3.4.2.4</a></li>
+                               <li class="innerLi"><a>Nav 3.4.2.5</a></li>
+                            </ul>
+                         </li>
+                         <li class="innerLi"><a>Nav 3.4.3</a></li>
+                         <li class="innerLi"><a>Nav 3.4.4</a></li>
+                         <li class="innerLi"><a>Nav 3.4.5</a></li>
+                      </ul>
+                   </li>
+                   <li class="innerLi"><a>Nav 3.5</a></li>
+                </ul>
+            </li>
+            <li class="topLi"><a>Nav 4</a></li>
+            <li class="topLi"><a>Nav 5</a></li>
+        </ul>       
+    </div>  
+     
+   <div class="wrap_jcarousel">
+        <div class="jcarousel">
+            <ul>
+                <li><img src="img/1.jpg" alt=""></li>
+                <li><img src="img/2.jpg" alt=""></li>
+                <li><img src="img/3.jpg" alt=""></li>
+                <li><img src="img/4.jpg" alt=""></li>
+                <li><img src="img/5.jpg" alt=""></li>
+            </ul>
+        </div>
+        <a class="jcarousel-prev" href="#"> </a>    
+        <a class="jcarousel-next" href="#"> </a>   
+        <p class="jcarousel-pagination"></p> 
+    </div>
+    
+    <div class="selectbox-wrapper">
+		<select id="default-usage-select">
+			<option value="--">Please select your favorite color</option>
+			<option value="01">Red</option>
+			<option value="02">Orange</option>
+			<option value="03">Yellow</option>
+			<option value="04">Green</option>
+			<option value="05">Blue</option>
+			<option value="06">Magenta</option>
+			<option value="07">Violet</option>
+			<option value="08">Ultra-violet</option>
+		</select>
+	</div>
+    
+    <form class="checkboxesJS">
+        <div>
+            <label for="">
+                label 1
+            </label>
+                <span class="niceCheck">
+                    <input type="checkbox">
+                </span>
+        </div>
+        <div>
+            <label for="">
+                label 2
+                <span class="niceCheck">
+                    <input type="checkbox"  checked="checked">
+                </span>
+            </label>
+        </div>
+        <div>
+            <label for="">
+                label 3
+                <span class="niceCheck">
+                    <input type="checkbox">
+                </span>
+            </label>
+        </div>
+    </form>
+    <form class="checkboxesCSS">
+       <div>
+            <input type="checkbox" id="test-check1">
+            <label for="test-check1">label 1</label>
+        </div>
+        <div>
+            <input type="checkbox" checked="checked" id="test-check2">
+            <label for="test-check2">label 2</label>
+        </div>
+        <div>
+            <input type="checkbox" id="test-check3">
+            <label for="test-check3">label 3</label>
+        </div>
+    </form>
+    
+</body>
+</html>
