@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Task21-22</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dist/script.main.es5.js"></script>
+</head>
+<body>
+
+  <script type="text/templates" id="result">
+    <form class="wrapper">
+      <p class="header"><%= header %></p>
+      <ol class="list">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <li><%= data[i].question %>
+          <ul>
+            <% for (var j = 0; j < data[i].answers.length; j++) { %>
+            <li>
+              <label>
+                <input type="radio" class="checkbox" name="<%= data[i].id %>" value="<%= data[i].check[j] %>">
+                <%= data[i].answers[j] %>
+              </label>
+            </li>
+            <% }; %>
+          </ul>
+        </li>
+        <% }; %>
+      </ol>
+    </form>
+    <button class="check">Проверить результаты</button>
+  </script>
+     
+  <div class="modal_window">
+    <p class="modal_text"></p>
+    <button class="modal_button">Начать сначала</button>
+  </div>
+  <div class="overlay"></div>
+
+</body>
+</html>

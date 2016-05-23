@@ -13,7 +13,7 @@ function pow(num, power) {
             result *= num;
     }
     return result;
-}
+};
 
 
 
