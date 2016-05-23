@@ -1,0 +1,67 @@
+.accordeon {
+	ul {
+		list-style: none;
+	}
+	.accordeon__item {
+		overflow: hidden;
+		font-size: 13px;
+		.accordeon__item-header {
+			position: relative;
+			height: 37px;
+			margin-bottom: 8px;
+			color: $dark;
+			background-color: white;
+			text-transform: uppercase;
+			line-height: 37px;
+			.accordeon__item-mark {
+				content: '+';
+				box-sizing: border-box;
+				display: inline-block;
+				width: 40px;
+				border: 1px solid $lightgray;
+				text-align: center;
+				font-size: 24px;
+				cursor: pointer;
+			}
+			.accordeon__item-hdr-text {
+				position: absolute;
+				box-sizing: border-box;
+				left: 39px;
+				right: 0;
+				padding-left: 14px;
+				border: 1px solid $lightgray;
+			}
+		}
+		.accordeon__item-content {
+			box-sizing: border-box;
+			visibility: hidden;
+			height: 0px;
+			margin: -20px 0 -35px 0;
+			padding: 20px 2px 35px 39px;
+			color: $gray;
+			font-size: 13px;
+			line-height: 20px;
+			transition: all 300ms linear 0s;
+		}
+	}
+	.accordeon__item--expanded {
+		.accordeon__item-header {
+			color: white;
+			background-color: $orange;
+			.accordeon__item-mark {
+				content: '-';
+				border: 0;
+				border-right: 1px solid rgba(255, 255, 255, 0.2);
+			}
+			.accordeon__item-hdr-text {
+				border: 0;
+			}
+		}
+		.accordeon__item-content {
+			visibility: visible;
+			height: auto;
+			margin: 0;
+			transition: all 300ms linear 0s;
+		}
+	}
+}
