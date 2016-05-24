@@ -1,4 +1,4 @@
-let test14 = {
+var test14 = {
   header: 'Тест 14',
   data: [ { question: 'Что обозначает директива ‘use strict’?',
       answers: ['Код данного скрипта будет обработан по строгим правилам стандарта EcmaScript 6',

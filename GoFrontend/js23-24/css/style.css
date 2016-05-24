@@ -1,0 +1,13 @@
+body {
+	font-family: sans-serif;
+}
+.item-delete,
+.item-edit {
+	cursor: pointer;
+	color:darkgrey;
+	font-size: 0.8em;
+}
+.item-delete:hover,
+.item-edit:hover {
+	color:darkslategray;
+}

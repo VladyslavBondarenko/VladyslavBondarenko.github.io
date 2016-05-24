@@ -3,15 +3,6 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-		concat: {
-			options: {
-				separator: ';'
-			},
-			dist: {
-				src: ['js/src/*.js'],
-				dest: 'js/dist/script.main.js'
-			}
-		},
 		babel: {
 			options: {
 				sourceMap: false,
@@ -20,32 +11,16 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'js/dist',
-					src: 'script.main.js',
+					cwd: 'js/src',
+					src: 'script.js',
 					dest: 'js/dist',
-					ext: '.main.es5.js',
+					ext: '.es5.js',
 					extDot: 'first'
 				}]
 			}
 		},
-		watch: {
-			script: {
-				files: ['js/src/*.js'],
-				tasks: ['concat'],
-				options: {
-						spawn: false,
-				},
-			},
-			babel: {
-				files: 'js/dist/script.main.js',
-				tasks: ['babel']
-			}
-		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	
-  grunt.registerTask('default', ['concat','babel']);
+	grunt.registerTask('default', ['babel']);
 
 };

@@ -1,0 +1,29 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Task23-24</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/app.js" src="js/require.js"></script>
+</head>
+<body>
+	
+	<h1>ToDoList</h1>
+
+	<script type="text/template" id="wrapper-template">
+		<div class="wrapper">
+			<ol class="item-list"></ol>
+			<div class="controls">
+				<input type="text" class="item-value">
+				<button class="item-add">Add</button>
+			</div>
+		</div>
+	</script>
+	
+	<script type="text/template" id="list-template">
+		<% for (var i = 0; i < data.length; i++) { %>
+			<li><%= data[i] %> <span class="item-edit" data-value="<%= data[i] %>"> (edit)</span><span data-value="<%= data[i] %>"class="item-delete"> (delete)</span></li>
+		<% }; %>
+	</script>
+	
+</body>
+</html>
