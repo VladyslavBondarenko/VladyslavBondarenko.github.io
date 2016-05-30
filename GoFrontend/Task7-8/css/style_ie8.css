@@ -39,15 +39,8 @@ body {
     background: url(../img/nav-mark-white.png) center no-repeat;
 }
 .slider {
-	background: none;
-}
-.slider:before {
-	position: absolute;
-	background-color: black;
-	opacity: 0.2;
-	content: "";
-	width: 100%;
-	height: 400px;
+    background: black;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
 }
 
 
@@ -203,5 +196,5 @@ background-position: 0 0;
     margin-left: 20%;
 }
 .updates_text:before {
-    background: url(../img/updates_img.jpg);
+    background: url(../img/updates_img_ie8.png);
 }
