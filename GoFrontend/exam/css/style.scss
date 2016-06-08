@@ -70,12 +70,14 @@ a {
 }
 .head {
 	width: 100%;
+	padding-top: 20px;
 	background: url(../img/couple.jpg) top center no-repeat;
 	@include mq(mobile, tablet) {
 		background: url(../img/couple_tablet.jpg) center no-repeat;
 	}
 	@include mq(tablet) {
 		background: url(../img/couple_big.jpg) center no-repeat;
+		padding-top: 0;
 		height: 700px;
 	}
 	@include mq(wide) {
@@ -86,7 +88,6 @@ a {
 	margin: auto;
 	text-align: center;
 	&_links {
-		margin-top: 20px;
 		@include mq(tablet) {
 			float: right;
 			margin: 38px 38px 0 0;
@@ -361,6 +362,7 @@ a {
 .gallery {
 	text-align: center;
 	width: 280px;
+	width: 94%;
 	margin: 0 auto 37px;
 	@extend %main-text;
 	@include mq(tablet) {
@@ -388,32 +390,45 @@ a {
 			}
 		}
 		&_results {
+			margin-bottom: 30px;
+			@include mq(tablet) {
+				margin: 0 0 90px -10px;
+			}
+			.grid:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
 			.grid {
-				overflow: hidden;
-				margin: 0 auto 27px;
-    		max-width: 940px;
 				@include mq(tablet) {
-					margin-bottom: 85px;
+					margin: auto;
 				}
-				@include mq(desktop) {
-					width: 940px;
-					margin: 0 auto;
+				&-sizer {
+					width: 235px;
+					@include mq(desktop) {
+						width: 300px;
+					}
 				}
 				&-item {
-					margin: 0 auto 10px;
-					overflow: hidden;
 					position: relative;
-					float: left;
-					width: 99.75%;
-					height: 120px;
+					overflow: hidden;
+					width: 99%;
+					height: 40vw;
+					margin: 0 auto 10px;
 					border-radius: 5px;
 					@include mq(tablet) {
-						width: 31%;
-						margin: 8px;
 						height: 310px;
-						&--5,
-						&--6 { 
-							width: 64%; 
+						width: 235px;
+						margin: 10px 0 0 10px;
+						&--width2 {
+							width: 480px;
+						}
+					}
+					@include mq(desktop) {
+						height: 312px;
+						width: 300px;
+						&--width2 { 
+							width: 610px; 
 						}
 					}
 				}
@@ -435,6 +450,9 @@ a {
 				}
 				&_img {
 					border-radius: 4px;
+					@include mq($until: tablet) {
+						width: 100%;
+					}
 				}
 			}
 		}
@@ -454,7 +472,7 @@ a {
 			margin: 14px 0 10px;
 			width: 250px;
 			@include mq(tablet) {
-			margin-top: 35px;
+				margin-top: 35px;
 				width: 210px;
 			}
 		}
@@ -543,6 +561,3 @@ a {
 		}
 	}
 }
-
-
-
