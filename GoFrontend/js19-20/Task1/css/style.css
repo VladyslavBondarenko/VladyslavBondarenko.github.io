@@ -53,33 +53,30 @@ head {
 .links_facebook {
   background-position: -0px 0; }
   .links_facebook:hover {
-    background-position: -0px -16px; }
+    background-position: -0px -17px; }
 
 .links_twitter {
   background-position: -9px 0; }
   .links_twitter:hover {
-    background-position: -9px -16px; }
+    background-position: -9px -17px; }
 
 .links_rss {
   background-position: -25px 0; }
   .links_rss:hover {
-    background-position: -25px -16px; }
+    background-position: -25px -17px; }
 
 .links_linkedin {
   background-position: -42px 0; }
   .links_linkedin:hover {
-    background-position: -42px -16px; }
+    background-position: -42px -17px; }
 
 .links_skype {
   background-position: -58px 0; }
   .links_skype:hover {
-    background-position: -58px -16px; }
+    background-position: -58px -17px; }
 
 .links_facebook {
   width: 8px; }
-
-.links:hover {
-  background-position: bottom; }
 
 .nav {
   margin: 35px 0;
@@ -104,6 +101,7 @@ head {
     background: #2a2d32; }
 
 .search input {
+  color: white;
   border: 1px solid #181a1d;
   padding: 0 30px 0 10px;
   font-size: 12px; }
@@ -335,7 +333,10 @@ head {
   font-size: 13px;
   color: #9e9e9e; }
   .news_info .blue {
-    color: #248cec; }
+    color: #248cec;
+    text-decoration: none; }
+    .news_info .blue:hover {
+      text-decoration: underline; }
 
 .news_text {
   margin-top: 25px;
@@ -386,6 +387,9 @@ head {
       text-align: center;
       font-size: 24px;
       cursor: pointer; }
+      .accordeon .accordeon__item .accordeon__item-header .accordeon__item-mark:hover {
+        font-size: 30px;
+        background-color: #F7F7F7; }
     .accordeon .accordeon__item .accordeon__item-header .accordeon__item-hdr-text {
       position: absolute;
       box-sizing: border-box;
@@ -410,6 +414,10 @@ head {
     content: '-';
     border: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.2); }
+    .accordeon .accordeon__item--expanded .accordeon__item-header .accordeon__item-mark:hover {
+      font-size: 24px;
+      cursor: default;
+      background: inherit; }
   .accordeon .accordeon__item--expanded .accordeon__item-header .accordeon__item-hdr-text {
     border: 0; }
 .accordeon .accordeon__item--expanded .accordeon__item-content {
