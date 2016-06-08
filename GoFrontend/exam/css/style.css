@@ -21,11 +21,11 @@
   margin-top: 34px; }
 
 .head_text, .steps .slider .slides .slide_text, .partners .partner_text, .gallery .search_text, .gallery .search_input, .footer_link {
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-weight: lighter; }
 
 .head, .steps, .partners, .gallery, .footer {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-weight: bold; }
 
 .head_find, .partners_other, .gallery .search_button {
@@ -267,12 +267,22 @@ a {
       display: inline-block;
       height: 122px;
       width: 122px; }
-      .partners .partner_img--face {
-        border-radius: 100%; }
-      .partners .partner_img--ico {
-        position: absolute;
-        bottom: 0;
-        right: -4px; }
+    .partners .partner_face {
+      height: 122px;
+      width: 122px;
+      border-radius: 100%; }
+      .partners .partner_face--1 {
+        background: url("../img/bradley(man).jpg"); }
+      .partners .partner_face--2 {
+        background: url("../img/lucas.jpg"); }
+      .partners .partner_face--3 {
+        background: url("../img/heather.jpg"); }
+      .partners .partner_face--4 {
+        background: url("../img/bradley.jpg"); }
+    .partners .partner_ico {
+      position: absolute;
+      bottom: 0;
+      right: -4px; }
     .partners .partner_header {
       font-size: 14px;
       margin: 14px 0;

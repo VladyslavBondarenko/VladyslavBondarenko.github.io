@@ -1,0 +1,20 @@
+$mq-responsive: false;
+@import 'style';
+
+.partners .partner {
+	width: 210px;
+	&_face {
+		&--1 {
+			background: url('../img/bradley(man)_round.png');
+		}
+		&--2 {
+			background: url('../img/lucas_round.png');
+		}
+		&--3 {
+			background: url('../img/heather_round.png');
+		}
+		&--4 {
+			background: url('../img/bradley_round.png');
+		}
+	}
+}

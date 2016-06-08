@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: inherit; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("montserrat-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto-light-webfont.woff2") format("woff2"), url("../fonts/roboto-light-webfont.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal; }
+.steps .steps-header, .partners_header, .gallery_header, .gallery .search_header {
+  text-align: center;
+  color: #333;
+  font-size: 22px;
+  margin-top: 34px; }
+
+.head_text, .steps .slider .slides .slide_text, .partners .partner_text, .gallery .search_text, .gallery .search_input, .footer_link {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: lighter; }
+
+.head, .steps, .partners, .gallery, .footer {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: bold; }
+
+.head_find, .partners_other, .gallery .search_button {
+  padding: 10px 22px;
+  border-radius: 22px;
+  color: white;
+  border: 2px solid transparent;
+  background: #ff4e50;
+  width: 250px; }
+  .head_find:hover, .partners_other:hover, .gallery .search_button:hover {
+    border-color: #ff4e50;
+    cursor: pointer;
+    color: #ff4e50;
+    background: white; }
+
+a {
+  text-decoration: none; }
+
+.head {
+  width: 100%;
+  padding-top: 20px;
+  background: url(../img/couple.jpg) top center no-repeat;
+  background: url(../img/couple_big.jpg) center no-repeat;
+  padding-top: 0;
+  height: 700px;
+  color: white;
+  margin: auto;
+  text-align: center; }
+  .head_links {
+    float: right;
+    margin: 38px 38px 0 0;
+    margin-right: 250px; }
+  .head_link {
+    color: white;
+    font-size: 14px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background: none; }
+    .head_link:hover {
+      cursor: pointer;
+      border-color: white; }
+  .head_underheader {
+    font-size: 20px;
+    margin-top: 110px;
+    text-transform: uppercase;
+    margin: 45px 0 0 50px;
+    float: left;
+    clear: none;
+    margin-left: 250px; }
+  .head_header {
+    padding-top: 27px;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-top: 135px;
+    font-size: 52px;
+    clear: both; }
+  .head_text {
+    margin: 10px 25px;
+    font-size: 18px;
+    font-size: 24px;
+    margin: 22px 0 32px; }
+  .head_find {
+    margin-bottom: 136px;
+    width: 225px; }
+
+.wrapper {
+  width: 300px;
+  margin: auto;
+  width: 940px; }
+
+.steps {
+  padding: 0 6px;
+  margin: 95px auto 0; }
+  .steps .slider {
+    margin: 12px auto;
+    color: white;
+    width: 300px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 33px 2.9% 0 0;
+    width: 258px;
+    height: 400px;
+    width: 31%; }
+    .steps .slider:last-child {
+      margin-right: 0; }
+    .steps .slider .slides {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -moz-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -ms-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      -o-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .steps .slider .slides .slide {
+        border-radius: 4px;
+        width: 100%;
+        height: 100%;
+        float: left;
+        clear: none;
+        position: relative;
+        padding: 0; }
+        .steps .slider .slides .slide_content {
+          position: absolute;
+          bottom: 0px;
+          padding: 0 10px 15px 19px;
+          padding: 15px 17px; }
+        .steps .slider .slides .slide_step {
+          font-size: 10px;
+          font-weight: normal;
+          letter-spacing: 2px;
+          margin-bottom: 15px;
+          padding: 5px 15px 3px;
+          background: #ff4e50;
+          text-transform: uppercase;
+          border-radius: 10px;
+          margin-left: 5px; }
+        .steps .slider .slides .slide_header {
+          font-size: 24px;
+          margin: 12px 0; }
+        .steps .slider .slides .slide_text {
+          line-height: 17px;
+          font-size: 14px;
+          color: #cccccc;
+          bottom: 0px; }
+        .steps .slider .slides .slide--1 {
+          background: url(../img/mac.jpg) no-repeat;
+          background: url(../img/mac_big.jpg); }
+        .steps .slider .slides .slide--2 {
+          background: url(../img/car.jpg) no-repeat;
+          background: url(../img/car_big.jpg); }
+        .steps .slider .slides .slide--3 {
+          background: url(../img/beach.jpg) no-repeat;
+          background: url(../img/beach_big.jpg); }
+    .steps .slider-arrow {
+      position: absolute;
+      display: block;
+      height: 56px;
+      width: 30px;
+      top: 40px;
+      top: 153px; }
+      .steps .slider-arrow--right {
+        background-image: url(../img/arrow_right.png);
+        right: 20px; }
+      .steps .slider-arrow--left {
+        background-image: url(../img/arrow_left.png);
+        left: 20px; }
+    .steps .slider-nav {
+      display: none; }
+
+.partners {
+  width: 280px;
+  margin: auto;
+  text-align: center;
+  margin: 92px auto 75px;
+  width: 100%; }
+  .partners_header {
+    margin-bottom: 20px; }
+  .partners-box {
+    overflow: hidden; }
+  .partners .partner {
+    display: block;
+    padding: 12px 25px;
+    font-size: 14px;
+    float: left;
+    padding: 12px 12px 29px;
+    width: 215px;
+    padding: 12px 10px; }
+    .partners .partner_img {
+      position: relative;
+      display: inline-block;
+      height: 122px;
+      width: 122px; }
+    .partners .partner_face {
+      height: 122px;
+      width: 122px;
+      border-radius: 100%; }
+      .partners .partner_face--1 {
+        background: url("../img/bradley(man).jpg"); }
+      .partners .partner_face--2 {
+        background: url("../img/lucas.jpg"); }
+      .partners .partner_face--3 {
+        background: url("../img/heather.jpg"); }
+      .partners .partner_face--4 {
+        background: url("../img/bradley.jpg"); }
+    .partners .partner_ico {
+      position: absolute;
+      bottom: 0;
+      right: -4px; }
+    .partners .partner_header {
+      font-size: 14px;
+      margin: 14px 0;
+      color: #333; }
+    .partners .partner_text {
+      line-height: 16px;
+      color: #666; }
+  .partners_other {
+    clear: left;
+    margin: 15px;
+    width: 99%;
+    margin-left: 4px;
+    width: 190px;
+    padding: 12px 30px; }
+
+.gallery {
+  text-align: center;
+  width: 280px;
+  width: 94%;
+  margin: 0 auto 37px;
+  width: 99%;
+  width: 100%; }
+  .gallery_header {
+    margin: 17px auto 12px;
+    margin: 17px auto 31px; }
+  .gallery .search_header {
+    margin: 0px 0 8px;
+    margin: 6px 0 30px;
+    margin-top: 90px; }
+  .gallery .search_results {
+    margin-bottom: 30px;
+    margin: 0 0 90px -10px; }
+    .gallery .search_results .grid:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .gallery .search_results .grid {
+      margin: auto; }
+      .gallery .search_results .grid-sizer {
+        width: 235px;
+        width: 300px; }
+      .gallery .search_results .grid-item {
+        position: relative;
+        overflow: hidden;
+        width: 99%;
+        height: 40vw;
+        margin: 0 auto 10px;
+        border-radius: 5px;
+        height: 310px;
+        width: 235px;
+        margin: 10px 0 0 10px;
+        height: 312px;
+        width: 300px; }
+        .gallery .search_results .grid-item--width2 {
+          width: 480px; }
+        .gallery .search_results .grid-item--width2 {
+          width: 610px; }
+      .gallery .search_results .grid_text-field {
+        position: absolute;
+        display: table;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center; }
+      .gallery .search_results .grid_text {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100px;
+        color: white;
+        font-size: 22px;
+        padding: 0 10px; }
+      .gallery .search_results .grid_img {
+        border-radius: 4px; }
+  .gallery .search_text {
+    font-size: 18px;
+    color: #333; }
+  .gallery .search_input {
+    font-size: 14px;
+    color: #333;
+    line-height: 38px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    padding: 0 15px;
+    margin: 14px 0 10px;
+    width: 250px;
+    margin-top: 35px;
+    width: 210px; }
+  .gallery .search_button {
+    width: 160px; }
+
+.footer {
+  border-top: 4px solid #ff4e50;
+  padding-top: 16px;
+  text-align: center;
+  margin-top: 92px; }
+  .footer_wrap {
+    overflow: hidden;
+    width: 940px;
+    margin: auto;
+    padding: 35px 0 40px; }
+  .footer_header {
+    font-size: 16px;
+    color: #ff4e50;
+    float: left; }
+  .footer_list {
+    float: left;
+    text-align: left;
+    padding-left: 85px; }
+  .footer_subheader {
+    display: block;
+    list-style: none;
+    font-size: 14px;
+    color: #333;
+    margin-top: 13px;
+    margin: 0 0 15px; }
+    .footer_subheader--designed {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #cccccc;
+      margin: 18px 0 8px;
+      margin: 0 0 5px; }
+  .footer_link {
+    display: inline-block;
+    margin-right: 15px;
+    display: block; }
+    .footer_link:last-child {
+      margin-right: 0; }
+    .footer_link:hover {
+      text-decoration: underline; }
+    .footer_link a {
+      font-size: 14px;
+      color: #666; }
+  .footer_designed {
+    text-align: right;
+    float: right; }
+
+.partners .partner {
+  width: 210px; }
+  .partners .partner_face--1 {
+    background: url("../img/bradley(man)_round.png"); }
+  .partners .partner_face--2 {
+    background: url("../img/lucas_round.png"); }
+  .partners .partner_face--3 {
+    background: url("../img/heather_round.png"); }
+  .partners .partner_face--4 {
+    background: url("../img/bradley_round.png"); }
+
+/*# sourceMappingURL=ie8.css.map */

@@ -34,11 +34,11 @@ $red: #ff4e50;
 	margin-top: 34px;
 }
 %secondary-text {
-	font-family: Roboto;
+	font-family: Roboto, Arial, sans-serif;
 	font-weight: lighter;
 }
 %main-text {
-	font-family: Montserrat;
+	font-family: Montserrat, Arial, sans-serif;
 	font-weight: bold;
 }
 %ellipse-button {
@@ -327,14 +327,28 @@ a {
 			display: inline-block;
 			height: 122px;
 			width: 122px;
-			&--face {
-				border-radius: 100%;
+		}
+		&_face {
+			height: 122px;
+			width: 122px;
+			border-radius: 100%;
+			&--1 {
+				background: url('../img/bradley(man).jpg');
 			}
-			&--ico {
-				position: absolute;
-				bottom: 0;
-				right: -4px;
+			&--2 {
+				background: url('../img/lucas.jpg');
 			}
+			&--3 {
+				background: url('../img/heather.jpg');
+			}
+			&--4 {
+				background: url('../img/bradley.jpg');
+			}
+		}
+		&_ico {
+			position: absolute;
+			bottom: 0;
+			right: -4px;
 		}
 		&_header {
 			font-size: 14px;
