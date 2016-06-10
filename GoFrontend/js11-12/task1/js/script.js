@@ -46,7 +46,6 @@ $(document).ready(function() {
         $('.carousel-arrow-right').addClass('carousel-arrow--disabled');
       if (currentLeftValue == maximumOffset)
         $('.carousel-arrow-left').addClass('carousel-arrow--disabled');
-      console.log(currentLeftValue);
     });
   });
 
@@ -76,8 +75,6 @@ $(document).ready(function() {
       var elementsCount = elementsList.find('li').length;
       var minimumOffset = - ((elementsCount - numberImg) * pixelsOffset);
       var maximumOffset = -elementsCount*pixelsOffset;
-      console.log(minimumOffset);
-      console.log(currentLeftValue);
 
       leftUIEl.click(function() {   
         if (currentLeftValue % maximumOffset == 0) {
@@ -87,7 +84,6 @@ $(document).ready(function() {
         }
         currentLeftValue += pixelsOffset;
         elementsList.animate({ left : currentLeftValue + "px"}, 500);
-        console.log(currentLeftValue);
       });
 
       rightUIEl.click(function() { 
@@ -96,7 +92,6 @@ $(document).ready(function() {
         }
         currentLeftValue -= pixelsOffset;
         elementsList.animate({ left : currentLeftValue + "px"}, 500);
-        console.log(currentLeftValue);
       });
 
     });

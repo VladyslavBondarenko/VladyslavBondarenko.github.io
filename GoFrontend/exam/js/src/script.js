@@ -8,6 +8,12 @@
 			arrowLeftText: "",
 		});
 		
+//		mounting massonry
+		
+//		i use setInterval - bacause images on request 
+//		do not have time to load 
+//		and the plugin is not activated
+		
 		var mas = setInterval(function() {
 			$('.grid').masonry({
 				itemSelector: '.grid-item', 
@@ -27,11 +33,11 @@
 				success: function (data) {
 					
 					if (data) {
-						var data = {'data': data};
+						var data = {'data': data}; //a direct from data the request is not working
 						var template = $('#search_template').html();
 						$('.search_results').html(tmpl(template, data));			
 					} else {
-							$('.search_results').html("Ошибка");
+							$('.search_results').html("Error");
 					}
 					
 				}
@@ -40,11 +46,11 @@
 			
 		}
 
-		getPictures('travelling');
+		getPictures('travelling'); //the default request
 
 		$('.search_button').on('click', function (e) {
-			var r = $('.search_input').val();
-			getPictures(r);
+			var request = $('.search_input').val();
+			getPictures(request);
 			
 		});
 			
