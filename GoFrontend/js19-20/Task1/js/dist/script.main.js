@@ -53,14 +53,17 @@ return b?(parseFloat(Sa(a,"marginLeft"))||(n.contains(a.ownerDocument,a)?a.getBo
 	});
 	
 	$('.accordeon__item-mark').on('click', function(e) {
+		var expandedItem = ($(this).html() === '+');
 		$('.accordeon__item--expanded')
 			.toggleClass('accordeon__item--expanded', false)
 			.find('.accordeon__item-mark')
 			.html('+');
-		$(this)
-			.html('-')
-			.closest('.accordeon__item')
-			.toggleClass('accordeon__item--expanded', true);
+		if (expandedItem) {
+			$(this)
+				.html('-')
+				.closest('.accordeon__item')
+				.toggleClass('accordeon__item--expanded', true);
+		};
 		return false;
 	});
 	

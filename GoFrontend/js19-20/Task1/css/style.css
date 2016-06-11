@@ -21,7 +21,9 @@ head {
   padding-top: 35px; }
 
 .logo {
-  display: inline; }
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none; }
 
 .logo_img {
   float: left;
@@ -40,7 +42,8 @@ head {
 
 .link-wrap {
   float: right;
-  margin-top: 30px; }
+  margin-top: 30px;
+  cursor: default; }
 
 .links {
   cursor: pointer;
@@ -414,10 +417,6 @@ head {
     content: '-';
     border: 0;
     border-right: 1px solid rgba(255, 255, 255, 0.2); }
-    .accordeon .accordeon__item--expanded .accordeon__item-header .accordeon__item-mark:hover {
-      font-size: 24px;
-      cursor: default;
-      background: inherit; }
   .accordeon .accordeon__item--expanded .accordeon__item-header .accordeon__item-hdr-text {
     border: 0; }
 .accordeon .accordeon__item--expanded .accordeon__item-content {
@@ -428,9 +427,11 @@ head {
 
 .logo {
   background: white;
+  width: 100%;
   text-align: center; }
 
 .logotype {
+  display: inline-block;
   margin: 90px 0;
   margin-right: 40px; }
   .logotype:last-child {
