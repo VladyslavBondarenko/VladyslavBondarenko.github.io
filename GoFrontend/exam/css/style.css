@@ -156,26 +156,23 @@ a {
       -ms-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
       -o-transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: all 500ms cubic-bezier(0.165, 0.84, 0.44, 1); }
-    .steps .slider-arrow {
-      position: absolute;
-      display: block;
-      height: 56px;
-      width: 30px;
-      top: 40px; }
-      @media (max-width: 47.99em) {
-        .steps .slider-arrow {
-          display: none; } }
-      @media (min-width: 58.75em) {
-        .steps .slider-arrow {
-          top: 153px; } }
-      .steps .slider-arrow--right {
-        background-image: url(../img/arrow_right.png);
-        right: 20px; }
-      .steps .slider-arrow--left {
-        background-image: url(../img/arrow_left.png);
-        left: 20px; }
     .steps .slider-nav {
       display: none; }
+
+.icon-arrow {
+  position: absolute;
+  display: block;
+  top: 40px; }
+  @media (max-width: 47.99em) {
+    .icon-arrow {
+      display: none; } }
+  @media (min-width: 58.75em) {
+    .icon-arrow {
+      top: 153px; } }
+  .icon-arrow--right {
+    right: 20px; }
+  .icon-arrow--left {
+    left: 20px; }
 
 .slide {
   border-radius: 4px;
@@ -290,7 +287,7 @@ a {
       background: url("../img/heather.jpg"); }
     .partner_face--4 {
       background: url("../img/bradley.jpg"); }
-  .partner_ico {
+  .partner_icon {
     position: absolute;
     bottom: 0;
     right: -4px; }

@@ -48,6 +48,9 @@ this.tmpl = function tmpl(str, data){
 			autoplay: false,
 			arrowRightText: "",
 			arrowLeftText: "",
+			arrowRightClass: "icon-arrow--right",
+			arrowLeftClass: "icon-arrow--left",
+			arrowMainClass: "icon-arrow"
 		});
 		
 //		mounting massonry
