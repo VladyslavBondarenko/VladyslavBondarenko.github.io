@@ -392,8 +392,7 @@ head {
       font-size: 24px;
       cursor: pointer; }
       .accordeon .accordeon__item .accordeon__item-header .accordeon__item-mark:hover {
-        font-size: 30px;
-        background-color: #F7F7F7; }
+        font-size: 30px; }
     .accordeon .accordeon__item .accordeon__item-header .accordeon__item-hdr-text {
       position: absolute;
       box-sizing: border-box;
