@@ -18,7 +18,6 @@ function start() {
         btnStart.innerHTML = "Cont..";
         btnStart.classList.remove('button_pause');
     } else {
-        btnStart.innerHTML = "Cont..";
         startTime = Date.now();
         timer = setInterval(timerHandler,54);
         run = true;
