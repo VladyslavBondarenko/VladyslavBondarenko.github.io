@@ -14,7 +14,18 @@ $(document).ready(function() {
     feedback: 'Если нужно, помогу с матаном'
   };
 
-  var content = tmpl(html, Bondarenko);
+  var BondarenkoS = {
+    name: 'Владислав Станислав',
+    img: 'img/photo.jpg',
+    profession: 'Студент КПИ',
+    reasons: ['не хочу',
+              'не буду'],
+    number: '+380970860340',
+    vk: 'vk.com',
+    feedback: 'фидбек'
+  };
+
+  var content = tmpl(html, BondarenkoS);
   $('body').append(content);
   
 });
