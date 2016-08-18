@@ -20,9 +20,6 @@ body {
     padding: 18px 46px 0px 44px;
     font-family: Arial, sans-serif;
 }
-wrapper {
-    width: 910px;
-}
 
                         /*HEADER*/
 
@@ -385,6 +382,7 @@ input[type="checkbox"] {
     border-radius: 3px;
 }
 .tovar td {
+    border: 1px solid transparent;
     text-align: center;
     width: 169px;
     height: 197px;

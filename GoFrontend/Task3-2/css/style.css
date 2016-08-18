@@ -7,7 +7,7 @@ body {
     background-color: #282828;
     margin-top: -50px;
 }
-main {
+.main {
     background: url(../img/Background.jpg) no-repeat;
     width: 820px;
     padding: 60px 75px;
@@ -15,6 +15,7 @@ main {
     height: 760;
     margin: auto;
     color: white;
+    font-family: sans-serif;
 }
 
 .logo {
@@ -50,8 +51,9 @@ main {
 }
 .gallery td {
     display: block;
-    width: 260px;
-    padding: 180px 15px 50px 15px;
+    float: left;
+    width: 250px;
+    padding: 180px 13px 50px 13px;
     position: relative;
     text-align: center;
     color: white;
@@ -70,8 +72,8 @@ main {
     width: 270px;
     height: 185px;
     position: absolute;
-    top: -5;
-    left: -5;
+    top: -5px;
+    left: -5px;
     background-image: url(../img/ramka.png);
 }
 .copyright {
