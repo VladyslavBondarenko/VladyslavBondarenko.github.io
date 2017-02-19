@@ -15,5 +15,3 @@ function pow(num, power) {
     return result;
 };
 
-
-
