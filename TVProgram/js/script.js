@@ -45,5 +45,4 @@ $(function() {
 	document.getElementById('download').addEventListener('click', function() {
 	    downloadCanvas(this, 'canvas', 'test.png');
 	}, false);
-
 });
