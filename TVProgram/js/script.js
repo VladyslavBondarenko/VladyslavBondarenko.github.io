@@ -26,18 +26,23 @@ $(function() {
 		  	}
 		});
 		 setTimeout(function() {
-		 	$('canvas').attr("id","canvas");
-		 	$('canvas').attr('crossorigin','anonymous');
-		 	downloadCanvas('canvas', 'images/programm.png');
-		}, 500);
+		 	$('canvas').attr('id','canvas');
+			console.log($('canvas'));
+			var canvas = document.getElementById('canvas');
+			console.log(canvas);
+			console.log(canvas.toDataURL());
+
+		}, 200);
 		$('#results').html("");
 	});
 
-	function downloadCanvas(canvasId, filename) {
-		var link  = document.createElement('a');
-	    link.href = document.getElementById('canvas').toDataURL('image/png');
+
+	function downloadCanvas(link, canvasId, filename) {
+	    link.href = document.getElementById(canvasId).toDataURL('image/png');
 	    link.download = filename;
-	    link.click();
 	}
 
+	document.getElementById('download').addEventListener('click', function() {
+	    downloadCanvas(this, 'canvas', 'test.png');
+	}, false);
 });

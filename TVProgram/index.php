@@ -50,5 +50,6 @@
     <h3><?=$_REQUEST['message'] ?? ''?></h3>
 	<div id="results"></div>
 	<div id="results-image--box"></div>
+
 </body>
 </html>
