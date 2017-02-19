@@ -43,9 +43,11 @@
 		<% }; %>
 		</ul>
 	</script>
-
+	
 	<input type="button" id="getProgramButton" value="Получить программу канала 1+1 на сегодня (html)">
 	<input type="button" id="html2canvasButton" value="Преобразовать в изображение">
+	<a href="upload.php"><input type="button" id="addPost" value="Добавить пост"></a>
+    <h3><?=$_REQUEST['message'] ?? ''?></h3>
 	<div id="results"></div>
 	<div id="results-image--box"></div>
 </body>
