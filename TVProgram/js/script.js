@@ -25,6 +25,25 @@ $(function() {
 		    	$('#results-image--box').append(canvas);
 		  	}
 		});
+		 setTimeout(function() {
+		 	$('canvas').attr('id','canvas');
+			console.log($('canvas'));
+			var canvas = document.getElementById('canvas');
+			console.log(canvas);
+			console.log(canvas.toDataURL());
+
+		}, 200);
 		$('#results').html("");
 	});
+
+
+	function downloadCanvas(link, canvasId, filename) {
+	    link.href = document.getElementById(canvasId).toDataURL('image/png');
+	    link.download = filename;
+	}
+
+	document.getElementById('download').addEventListener('click', function() {
+	    downloadCanvas(this, 'canvas', 'test.png');
+	}, false);
+
 });
