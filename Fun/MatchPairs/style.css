@@ -1,0 +1,18 @@
+#pole .hidden{
+    background-color: #ccc;
+    color: #ccc;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    background-color: #eee;
+    font-size: 72px;
+    font-family: sans-serif;
+}

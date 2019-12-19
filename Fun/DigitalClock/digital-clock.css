@@ -1,0 +1,94 @@
+.time {
+	background: #333;
+}
+.time span {
+	display: inline-block;
+	width: 80px;
+}
+.time span.colon {
+	width: 16px;
+}
+.time .colon b,
+.time span b {
+	float: left;
+	width: 28px;
+	height: 28px;
+	background: #444;
+	overflow: hidden;
+}
+.time .colon b {
+	display: none;
+	margin: 0 0 16px;
+}
+.time span.colon .c11,
+.time span.colon .c12 {
+	display: block;
+	visibility: visible;
+	background: limegreen;
+}
+.c05,.c15,.c25,.c35,.c45,.c55,.c65,.c75,.c85,.c95 {
+	visibility: hidden;
+}
+.d0 .c11, .d0 .c12, .d0 .c13, .d0 .c21, .d0 .c23, .d0 .c31, .d0 .c33, .d0 .c41, .d0 .c43, .d0 .c51, .d0 .c52, .d0 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d1 .c13, .d1 .c23, .d1 .c33, .d1 .c43, .d1 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d2 .c11, .d2 .c12, .d2 .c13, .d2 .c23, .d2 .c31, .d2 .c32, .d2 .c33, .d2 .c41, .d2 .c51, .d2 .c52, .d2 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d3 .c11, .d3 .c12, .d3 .c13, .d3 .c23, .d3 .c31, .d3 .c32, .d3 .c33, .d3 .c43, .d3 .c51, .d3 .c52, .d3 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d4 .c11, .d4 .c13, .d4 .c21, .d4 .c23, .d4 .c31, .d4 .c32, .d4 .c33, .d4 .c43, .d4 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d5 .c11, .d5 .c12, .d5 .c13, .d5 .c21, .d5 .c31, .d5 .c32, .d5 .c33, .d5 .c43, .d5 .c51, .d5 .c52, .d5 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d6 .c11, .d6 .c12, .d6 .c13, .d6 .c21, .d6 .c31, .d6 .c32, .d6 .c33, .d6 .c41, .d6 .c43, .d6 .c51, .d6 .c52, .d6 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d7 .c11, .d7 .c12, .d7 .c13, .d7 .c23, .d7 .c33, .d7 .c43, .d7 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d8 .c11, .d8 .c12, .d8 .c13, .d8 .c21, .d8 .c23, .d8 .c31, .d8 .c32, .d8 .c33, .d8 .c41, .d8 .c43, .d8 .c51, .d8 .c52, .d8 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+.d9 .c11, .d9 .c12, .d9 .c13, .d9 .c21, .d9 .c23, .d9 .c31, .d9 .c32, .d9 .c33, .d9 .c43, .d9 .c51, .d9 .c52, .d9 .c53 {
+	visibility: visible;
+	background: limegreen
+}
+
+
+/* Example 8 */
+#example8 span {
+	width: 149px;
+	margin-right: -32px;
+}
+#example8 span.colon {
+	width: 31px;
+	margin-right: 0;
+}
+#example8 .colon b,
+#example8 span b {
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0 1px 1px 0;
+}
+#example8 .colon b {
+	margin: 0 0 30px;
+}
+#example8 .colon {
+	margin-bottom: 28px;
+}
