@@ -1,21 +1,76 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" id="meta" name="viewport">
-  <title>Test site</title>
+  <title>Mart test site</title>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    .content {
-      height: 2000px;
+
+    html, body, .container {
+      height: 100%;
+      font-family: sans-serif;
+    }
+    .container {
+      margin: 20px;
+      text-align: left;
+    }
+
+    .simple-form {
+      padding: 10px;
+    }
+
+    .simple-form div {
+      margin-bottom: 10px;
+    }
+
+    div {
+      margin: 10px 0;
     }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-  <div class="content">Some site</div>
+  <div class="container">
+    <h1>Welcome to the Fun Zone</h1>
+    <form class="simple-form">
+      <div>
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div>
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div>
+        <input type="submit" value="Subscribe!">
+      </div>
+    </form>
+    <div>
+      <div>
+        <label>
+          This is a text input, where the input will be format on `input`
+          <input id="text-input" />
+        </label>
+      </div>
+      <div>
+        <label>
+          This is a number input, nothing happens here
+          <input type="number"/>
+        </label>
+      </div>
+      <div>
+          This is a textarea
+          <textarea rows="25"></textarea>
+      </div>
+    </div>
+  </div>
   <script async src="https://api.beta.salemove.com/salemove_integration.js"></script>
+  <script src="index.js"></script>
 </body>
