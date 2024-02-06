@@ -5,10 +5,6 @@
     <title>Beta</title>
     <base href="/beta-dist/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      defer
-      src="https://api.beta.salemove.com/salemove_integration.js"
-    ></script>
     <style>
       html,
       body {
@@ -37,5 +33,12 @@
       type="module"
     ></script>
     <script src="/beta-dist/main.9fb916b0ee55fe55.js" type="module"></script>
+    <script>
+      window.addEventListener("load", function () {
+        var script = document.createElement("script");
+        script.src = "https://api.beta.salemove.com/salemove_integration.js";
+        document.body.appendChild(script);
+      });
+    </script>
   </body>
 </html>
